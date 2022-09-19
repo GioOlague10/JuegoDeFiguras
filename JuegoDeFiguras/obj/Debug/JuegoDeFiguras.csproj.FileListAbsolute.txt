@@ -1,0 +1,14 @@
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.csprojAssemblyReference.cache
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.Form1.resources
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.Properties.Resources.resources
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.csproj.GenerateResource.cache
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.csproj.CoreCompileInputs.cache
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\bin\Debug\JuegoDeFiguras.exe.config
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\bin\Debug\JuegoDeFiguras.exe
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\bin\Debug\JuegoDeFiguras.pdb
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\bin\Debug\FigurasGDI.dll
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\bin\Debug\System.Drawing.Common.dll
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\bin\Debug\System.Drawing.Common.xml
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.csproj.CopyComplete
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.exe
+D:\Downloads\JuegoDeFiguras-master\JuegoDeFiguras-master\JuegoDeFiguras\obj\Debug\JuegoDeFiguras.pdb

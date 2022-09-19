@@ -65,17 +65,17 @@ namespace JuegoDeFiguras
                 if (type.BaseType == typeof(Figura))
                     todasLasFiguras.Add(type);
             }
-            
+
             while (!cancellationToken.IsCancellationRequested)
             {
                 Figura figura = null;
                 double ancho, alto;
 
-                int w = randomFiguras.Next(0, todasLasFiguras.Count-1);
+                int w = randomFiguras.Next(0, todasLasFiguras.Count - 1);
 
                 Type type = todasLasFiguras[w].GetTypeInfo();
                 ConstructorInfo ctor = type.GetConstructor(new[] { typeof(double), typeof(double), typeof(double), typeof(double), typeof(Color) });
-                if(ctor != null)
+                if (ctor != null)
                 {
                     figura = (Figura)ctor.Invoke(new object[] { 0, 0,
                             randomFiguras.Next(this.AnchoDibujo), 0,
@@ -95,12 +95,10 @@ namespace JuegoDeFiguras
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                if (this.ContenedorFiguras.Count > 0)
-                {
-                    Figura figura = this.ContenedorFiguras.Dequeue();
-                    this.Juego.Figuras.Add(figura);
-                    figura = null;
-                }
+
+                Contfigura();
+
+
                 Thread.Sleep(650);
                 Console.WriteLine("Objeto recolectado");
             }
@@ -108,10 +106,11 @@ namespace JuegoDeFiguras
         private void DefineAnchoAlto(FormaTypes forma, out double ancho, out double alto)
         {
             ancho = 0; alto = 0;
+            ancho = randomAncho_Figuras.Next(10, 50);
             switch (forma)
             {
                 case FormaTypes.Cuadrado:
-                    ancho = randomAncho_Figuras.Next(10, 50);
+                    
                     alto = ancho;
                     break;
                 case FormaTypes.RectanguloHorizontal:
@@ -119,7 +118,7 @@ namespace JuegoDeFiguras
                     ancho = randomAncho_Figuras.Next((int)alto + 1, 100);
                     break;
                 case FormaTypes.RectanguloVertical:
-                    ancho = randomAncho_Figuras.Next(10, 50);
+                    
                     alto = randomAlto_Figuras.Next((int)ancho + 1, 100);
                     break;
                 default:
@@ -128,11 +127,11 @@ namespace JuegoDeFiguras
         }
         private Color SeleccionarColor()
         {
-            int valor = randomColorRGB.Next(0, 255);
+            int valor = Colorrandom();
 
-            int R = randomColorRGB.Next(0, 255);
-            int G = randomColorRGB.Next(0, 255);
-            int B = randomColorRGB.Next(0, 255);
+            int R = Colorrandom();
+            int G = Colorrandom();
+            int B = Colorrandom();
 
             return Color.FromArgb(R, G, B);
 
@@ -205,7 +204,8 @@ namespace JuegoDeFiguras
         #region MÉTODOS ASÍNCRONOS (DESUSO)
         public async Task<int> CrearObjetos()
         {
-            var task = new Task<int>(() => {
+            var task = new Task<int>(() =>
+            {
                 int caso = 1;
                 while (true)
                 {
@@ -242,14 +242,13 @@ namespace JuegoDeFiguras
         }
         public async Task<int> RecolectarObjetos()
         {
-            var task = new Task<int>(() => {
+            var task = new Task<int>(() =>
+            {
                 while (true)
                 {
-                    if (this.ContenedorFiguras.Count > 0)
-                    {
-                        Figura figura = this.ContenedorFiguras.Dequeue();
-                        this.Juego.Figuras.Add(figura);
-                    }
+
+                    Contfigura();
+
                     Thread.Sleep(650);
                 }
                 return 0;
@@ -260,5 +259,22 @@ namespace JuegoDeFiguras
 
         }
         #endregion
+        public void Contfigura()
+        {
+            if (this.ContenedorFiguras.Count > 0)
+            {
+                Figura figura = this.ContenedorFiguras.Dequeue();
+                this.Juego.Figuras.Add(figura);
+                figura = null;
+
+            }
+
+        }
+        public int Colorrandom()
+        {
+            int color=randomColorRGB.Next(0, 255);
+            return color;
+        }
     }
 }
+

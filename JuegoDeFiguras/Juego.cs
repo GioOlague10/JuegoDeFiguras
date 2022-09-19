@@ -61,9 +61,9 @@ namespace JuegoDeFiguras
                
                 #region DETECCIÓN DE COLISIONES
                 double Dx = 0, Dy = 0;
-                List<Figura> figurasAEliminar = new List<Figura>();                
 
-                foreach(Figura figura in this.Figuras)
+                List<Figura> figurasAEliminar = new List<Figura>();
+                foreach (Figura figura in this.Figuras)
                 {
                     // DETERMINAR QUIEN ESTA A LA IZQUIERDA Y DERECHA
                     if(figura.X <= this.Jugador.X)
@@ -81,10 +81,7 @@ namespace JuegoDeFiguras
                     }
                 }
                 // ELIMINAR FIGURAS ATRAPADAS
-                foreach (Figura figuraAEliminar in figurasAEliminar)
-                {
-                    this.Figuras.Remove(figuraAEliminar);
-                }
+                forechF();
                 #endregion
 
                 // ELIMINAR FIGURAS QUE DESAPARECEN POR DEBAJO
@@ -95,10 +92,7 @@ namespace JuegoDeFiguras
                     if (figura.Y > this.AltoDibujo)
                         figurasAEliminar.Add(figura);
                 }
-                foreach(Figura figuraAEliminar in figurasAEliminar)
-                {
-                    this.Figuras.Remove(figuraAEliminar);
-                }
+                forechF();
                 
             }
             catch (Exception ex)
@@ -185,6 +179,13 @@ namespace JuegoDeFiguras
         }
 
         #endregion
-
+        public void forechF()
+        {
+            List<Figura> figurasAEliminar = new List<Figura>();
+            foreach (Figura figuraAEliminar in figurasAEliminar)
+            {
+                this.Figuras.Remove(figuraAEliminar);
+            }
+        }
     }
 }

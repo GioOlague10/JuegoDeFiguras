@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FigurasGDI, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FigurasGDI.1.5.0\lib\netstandard2.0\FigurasGDI.dll</HintPath>
+    <Reference Include="FigurasGDI, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FigurasGDI.1.9.0\lib\netstandard2.0\FigurasGDI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
